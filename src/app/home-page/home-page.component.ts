@@ -9,8 +9,7 @@ import { ComputersService } from 'app/computers.service';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent {
-  computers$ = this.computersService.computers$;
-  isFetching$ = this.computersService.computers$.pipe(map(c => !c));
+  computers$ = this.computersService.state.$.pipe(map(v => v.computers));
 
   constructor(private computersService: ComputersService) { }
 
