@@ -1,0 +1,10 @@
+@import "vars";
+
+:host {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    background: black;
+    color: white;
+    height: 100%;
+}

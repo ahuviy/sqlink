@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    font-family: "Arimo", sans-serif;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+a {
+    text-decoration: inherit;
+    color: inherit;
+    user-select: auto;
+}
+
+input, textarea {
+    font-family: "Arimo", sans-serif;
+}
+
+button {
+    outline: none;
+    margin: 0;
+    padding: 2px 4px;
+    width: auto;
+    overflow: visible;
+    cursor: pointer;
+    border-style: solid;
+    border-radius: 4px;
+    font: inherit;
+
+    &[disabled] {
+        cursor: default;
+        pointer-events: none;
+        opacity: 0.5;
+    }
+}
