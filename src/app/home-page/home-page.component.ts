@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { map } from 'rxjs/operators';
+
+import { ComputersService } from 'app/computers.service';
 
 @Component({
   selector: 'home-page',
@@ -6,5 +9,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent {
+  computers$ = this.computersService.computers$;
+  isFetching$ = this.computersService.computers$.pipe(map(c => !c));
 
+  constructor(private computersService: ComputersService) { }
+
+  ngOnInit() {
+    this.computersService.fetchData();
+  }
 }

@@ -1,1 +1,10 @@
-<div>home page works!</div>
+<div class="computers-list" *ngIf="computers$ | async as computers; else isFetching">
+    <div class="card-wrapper" *ngFor="let comp of computers">
+        <sq-computer-card [computer]="comp"></sq-computer-card>
+    </div>
+</div>
+<ng-template #isFetching>
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+</ng-template>

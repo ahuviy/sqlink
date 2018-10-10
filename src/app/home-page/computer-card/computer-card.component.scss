@@ -1,0 +1,16 @@
+@import "vars";
+
+:host {
+    font-family: Helvetica;
+    display: block;
+    height: 100%;
+    border: 1px solid black;
+    direction: rtl;
+    text-align: center;
+}
+
+.header {
+    background: lightgray;
+    height: 50px;
+    line-height: 50px;
+}
